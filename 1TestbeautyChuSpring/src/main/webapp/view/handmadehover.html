@@ -8,11 +8,24 @@
 	type="image/x-icon">
 <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" type="text/css" href="../css/common.css">
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <style type="text/css">
 	/* 스타일 적용 공간! */
+* {
+border: red 1px solid; 
+}
+#content {
+margin-top: -100px;
+position: relative;
+width: 250px;
+height: 100px;
+background-color: rgba(0,0,0,0.5);
+}
+img{
+width: 250px;
+height: 250px;
+}
 </style>
-
 </head>
 <body>
 
@@ -25,7 +38,14 @@
 	<div id="wrap-chu" class="wrap-chu">
 	
 		<!-- 작업공간 - 이파일 고치지 말고 복사해서 쓰시오...!! -->
-	ㅋ
+	<div id="content">
+	<img id="back" src="../images/shop/4.jpg"/>
+				<p>이름</p>
+				<p>상세정보</p>
+				<p>별</p>
+		</div>
+	
+	
 	</div>
 
 
@@ -47,6 +67,16 @@
 		window.setTimeout('window.location.reload()', 7000); //60초마다 새로고침
 		 */
 	</script>
-
+<script>
+$(document).ready(function(){
+  $("#back").hover(function(){
+	    $("#content").css("height","250px");
+	    $("#content").css("margin-top","-250px");
+    },function(){
+    $("#content").css("height","100px");
+    $("#content").css("margin-top","-100px");
+  });
+});
+</script>
 </body>
 </html>

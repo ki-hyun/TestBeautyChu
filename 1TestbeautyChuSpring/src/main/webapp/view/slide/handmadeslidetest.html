@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>slide demo</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+  <style>
+  #toggle {
+    width: 1000px;
+    height: 600px;
+    background: #ccc;
+    z-index: 999999;
+    float: left;
+  }
+ 	#back {
+    width: 1000px;
+    height: 600px;
+    background: black;
+  }
+  #inner{
+  border: 1px red solid;
+  }
+  </style>
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+</head>
+<body>
+ 
+<p>Click anywhere to toggle the box.</p>
+<div id="toggle"><div id="inner">111111111</div><img src="../../images/shop/1.jpg"/><button id="more">clsoe</button></div>
+<div id="back"><div></div></div>
+<button id="more">more</button>
+ 
+<script>
+$( "#more" ).click(function() {
+  $( "#toggle" ).toggle( "slide" );
+});
+</script>
+ 
+</body>
+</html>
